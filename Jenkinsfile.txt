@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build & Test') {
+            steps {
+                // This runs your pom.xml and JUnit tests
+                sh 'mvn clean test'
+            }
+        }
+    }
+}
